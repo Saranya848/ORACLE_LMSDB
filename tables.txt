@@ -1,0 +1,39 @@
+CREATE TABLE User_Details(Id int PRIMARY KEY, email VARCHAR(100), first_name VARCHAR(100), last_name VARCHAR(100), Password VARCHAR(100), contact_number LONG, verified VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+CREATE TABLE Hired_Candidate(Id int PRIMARY KEY, first_name VARCHAR(100), middle_name VARCHAR(100), last_name VARCHAR(100), EmailId VARCHAR(100), Hired_City VARCHAR(100), Degree VARCHAR(100), Hired_Date  DATETIME, Mobile_Number Long, Permanent_Pincode LONG, Hired_Lab VARCHAR(100), Attitude VARCHAR(100), Communication_Remark VARCHAR(100), Knowledge_Remark VARCHAR(100), Aggregate_Remark VARCHAR(100), Status VARCHAR(100), Creator_Stamp DATETIME, Creator_User int);
+
+
+CREATE TABLE Fellowship_Candidate(Id int PRIMARY KEY, CIC_ID VARCHAR(100), first_name VARCHAR(100), middle_name VARCHAR(100), last_name VARCHAR(100), EmailId VARCHAR(100), Hired_City VARCHAR(100), Degree VARCHAR(100), Hired_Date  DATETIME, Mobile_Number Long, Permanent_Pincode LONG, Hired_Lab VARCHAR(100), Attitude VARCHAR(100), Communication_Remark VARCHAR(100), Knowledge_Remark VARCHAR(100), Aggregate_Remark VARCHAR(100), Creator_Stamp DATETIME, Creator_User VARCHAR(100), Birth_Date  DATETIME, Is_Birth_Date_Verified VARCHAR(100), Parent_Name VARCHAR(100) NOT NULL, Parent_Occupation VARCHAR(100), Parents_Mobile_Number Long, Parents_Annual_Salary LONG, Local_Address VARCHAR(100), Permanent_Address VARCHAR(100), Photo_Path VARCHAR(100), Joinig_Date  DATETIME, Candidate_Status VARCHAR(100), Personal_Information VARCHAR(100), Bank_Information VARCHAR(100), Educational_Information VARCHAR(100), Document_Status VARCHAR(100), Remark VARCHAR(100));
+
+CREATE TABLE Candidate_Bank_Details(Id int PRIMARY KEY, candidate_Id int NOT NULL, Name VARCHAR(100) NOT NULL, Account_Number int, Is_Account_Num_Verified VARCHAR(100), Ifsc_code VARCHAR(100), is_ifsc_code_verified VARCHAR(100), pan_number VARCHAR(100), is_pan_number_verified VARCHAR(100), addhaar_num LONG, is_addhaar_num_verified VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+CREATE TABLE Candidate_Qualification(Id int PRIMARY KEY, candidate_Id int NOT NULL, diploma VARCHAR(100), degree_name VARCHAR(100), is_degree_name_verified VARCHAR(100), employee_decipline VARCHAR(100), is_employee_decipline_verified VARCHAR(100), passing_year int, is_passing_year_verified VARCHAR(100), aggr_per int, is_aggr_per_verified VARCHAR(100), final_year_per int, is_final_year_per_verified VARCHAR(100), training_institute VARCHAR(100), is_training_institute_verified VARCHAR(100), training_duration_month VARCHAR(100), is_training_duration_month_verified VARCHAR(100), other_training VARCHAR(100), is_other_training_verified VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+CREATE TABLE Candidate_Documents(Id int PRIMARY KEY, candidate_Id int NOT NULL, doc_type VARCHAR(100), doc_path VARCHAR(100), Status VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+CREATE TABLE Company(Id int PRIMARY KEY, name VARCHAR(100), address VARCHAR(100), location VARCHAR(100), status VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+CREATE TABLE Maker_Program(Id int PRIMARY KEY, program_name VARCHAR(100), program_type VARCHAR(100), program_link VARCHAR(100), tech_stack_Id int NOT NULL, tech_type_Id int NOT NULL, is_program_approved VARCHAR(100), Description VARCHAR(100), status VARCHAR(100), creator_stamp DATETIME, Creator_user int);
+
+
+CREATE TABLE Mentor(Id int PRIMARY KEY, name VARCHAR(100), mentor_type VARCHAR(100), lab_Id int NOT NULL, Status VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+CREATE TABLE Mentor_Ideation_Map(Id int PRIMARY KEY, parent_mentor_Id int NOT NULL, mentor_Id int NOT NULL, status VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+
+CREATE TABLE Mentor_Tech_Stack(Id int PRIMARY KEY, mentor_Id int NOT NULL, tech_stack_Id int NOT NULL, Status VARCHAR(100), creator_stamp datetime, Creator_user int);
+
+
+CREATE TABLE Tech_Stack(Id int PRIMARY KEY, tech_name VARCHAR(100), image_path VARCHAR(100), framework VARCHAR(100), cur_status VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+CREATE TABLE Tech_Type(Id int PRIMARY KEY, type_name VARCHAR(100), cur_status VARCHAR(100), creator_stamp DATETIME, Creator_user int);
+
+CREATE TABLE Lab(Id int PRIMARY KEY, name VARCHAR(100), location VARCHAR(100), address VARCHAR(100), Status VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+
+CREATE TABLE Lab_Threshold(Id int PRIMARY KEY, lab_Id int NOT NULL, lab_capacity VARCHAR(100), lead_threshold VARCHAR(100), ideation_engg_threshold VARCHAR(100), buddy_engg_threshold VARCHAR(100), Status VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+CREATE TABLE Company_Requirement(id int, company_Id int NOT NULL, requested_month VARCHAR(100), city VARCHAR(100), is_doc_verifrication VARCHAR(100), requirement_doc_path VARCHAR(100), no_of_engg int, tech_stack_Id int NOT NULL, tech_type_Id int NOT NULL, maker_program_Id int NOT NULL, lead_Id int NOT NULL, ideation_engg_Id int NOT NULL, buddy_engg_Id int NOT NULL, special_remark VARCHAR(100), Status VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
+
+
+CREATE TABLE Candidate_Stack_Assignment(Id int PRIMARY KEY, requirement_Id int NOT NULL, candidate_Id int NOT NULL, assign_date DATETIME, complete_date DATETIME, Status VARCHAR(100), creator_stamp DATETIME, creator_user int NOT NULL);
