@@ -18,24 +18,17 @@ CREATE TABLE hired_candidate
       creator_stamp DATETIME NOT NULL,
       creator_user VARCHAR(100));
 
+insert into hired_candidate (first_name, middle_name,last_name,email,hired_city,degree,hired_date,mobile_number,permanent_pincode,hired_lab,attitude, communication_remark,knowledge_remark,aggregate_remark,status,creator_stamp,creator_user)
+ values('Saranya', 'NA', 'Siripurapu','Saranya@gmail.com','Mumbai','B.tech', Now(),'79834578602','438475','Mumbai','Positive','Good','Good','81','Accepted', '19-01-22 15:45:21', 'saranya'),
+ ('Lakshmi', 'NA', 'Siripurapu','lakshmi@gmail.com','Pune','BE',Now(),'8924869462','575324','Pune','Positive','Good','Good','87','Accepted','19-08-19 12:45:30', 'lakshmi'),
+ ('Sai', 'NA', 'Tarun','Sai@gmail.com','Mumbai','M.tech', Now(),'7860358935','475392','Mumbai','Positive','Good','Good','90','Accepted', '14-02-22 10:45:30', 'sai'),
+ ('Nithya', 'NA', 'Allu','Nithya@gmail.com','Bangalore','BE',Now(),'86798703452','324924','Pune','Positive','Good','Good','60','Pending','10-12-21 17:15:10', 'nithya'),
+ ('Vishal', 'NA','Kumar', 'Vamsi@gmail.com','Mumbai','B.tech', Now(),'8394027485','438475','Mumbai','Positive','Good','Good','81','Accepted', '05-07-17 13:45:10', 'vamsi'),
+ ('Rahul', 'NA', 'Varma','Rahul@gmail.com','Pune','B.Com',Now(),'7894205784','349224','Mumbai','Positive','Good','Good','78','Accepted','08-08-21 12:45:30', 'rahul'),
+ ('Swathi', 'NA','Attada', 'swathi@gmail.com','Mumbai','B.tech', Now(),'8539402748','438475','Mumbai','Positive','Good','Good','81','Accepted', '05-07-17 13:45:10', 'vamsi'),
+ ('Raj', 'NA','Kumar', 'raj@gmail.com','Mumbai','B.tech', Now(),'8485394027','438475','Mumbai','Positive','Good','Good','81','Accepted', '05-07-17 13:45:10', 'vamsi'),
+ ('Divya', 'NA','Sree', 'divya@gmail.com','Bangalore','B.tech', Now(),'8348940275','438475','Mumbai','Positive','Good','Good','81','Accepted', '05-07-17 13:45:10', 'vamsi'),
+ ('Pavan', 'NA','Kumar', 'pavan@gmail.com','Mumbai','B.tech', Now(),'8385940274','438475','Mumbai','Positive','Good','Good','81','Accepted', '05-07-17 13:45:10', 'vamsi'),
+ ('Anusha', 'NA','Kumari', 'anusha@gmail.com','Mumbai','B.tech', Now(),'8835940274','438475','Mumbai','Positive','Good','Good','81','Accepted', '05-07-17 13:45:10', 'vamsi');
 
-insert into hired_candidate (first_name, middle_name,last_name,email,hired_city,degree,hired_date,mobile_number,permanent_pincode,hired_lab,attitude, communication_remark,knowledge_remark,aggregate_remark,status,creator_stamp,creator_user)
-  values('Ram','Kumar','Varma','ramkumar@gmail.com','Mumbai','B.tech', Now(),'8947583089','438475','Mumbai','Positive','Good','Good','81','Accepted', NOW(),'ram');
-  
-  
-insert into hired_candidate (first_name, middle_name,last_name,email,hired_city,degree,hired_date,mobile_number,permanent_pincode,hired_lab,attitude, communication_remark,knowledge_remark,aggregate_remark,status,creator_stamp,creator_user)
-  values('Priyanka','Varma','Jai','priyanka@gmail.com','Pune','BE',Now(),'7830489579','575324','Pune','Positive','Good','Good','87','Accepted',NOW(),'priyanka');
-
-insert into hired_candidate (first_name, middle_name,last_name,email,hired_city,degree,hired_date,mobile_number,permanent_pincode,hired_lab,attitude, communication_remark,knowledge_remark,aggregate_remark,status,creator_stamp,creator_user)
-  values('Ajay','','Varma','ajay@gmail.com','Mumbai','M.tech', Now(),'8978302938','475392','Mumbai','Positive','Good','Good','90','Accepted', NOW(),'ajay');
-  
-  
-insert into hired_candidate (first_name, middle_name,last_name,email,hired_city,degree,hired_date,mobile_number,permanent_pincode,hired_lab,attitude, communication_remark,knowledge_remark,aggregate_remark,status,creator_stamp,creator_user)
-  values('Vinay','Kumar','Varma','vinay@gmail.com','Bangalore','BE',Now(),'7384920299','324924','Pune','Positive','Good','Good','60','Pending',NOW(),'vinay');
-
-insert into hired_candidate (first_name, middle_name,last_name,email,hired_city,degree,hired_date,mobile_number,permanent_pincode,hired_lab,attitude, communication_remark,knowledge_remark,aggregate_remark,status,creator_stamp,creator_user)
-  values('Vishal','Kumar','Varma','vishalkumar@gmail.com','Mumbai','B.tech', Now(),'8947583089','438475','Mumbai','Positive','Good','Good','81','Accepted', NOW(),'vishal');
-  
-  
-insert into hired_candidate (first_name, middle_name,last_name,email,hired_city,degree,hired_date,mobile_number,permanent_pincode,hired_lab,attitude, communication_remark,knowledge_remark,aggregate_remark,status,creator_stamp,creator_user)
-  values('Naresh','Kumar','Jammu','naresh@gmail.com','Mumbai','B.Com',Now(),'9528494979','349224','Mumbai','Positive','Good','Good','78','Accepted',NOW(),'naresh');
+Select * from hired_candidate;
